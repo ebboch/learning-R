@@ -69,7 +69,46 @@ summary(uciCar) #counter
 # saveRDS? str?
 
 ### Using R with less-structured data
-setwd()
+setwd('C:/Users/jbejarao/Documents/learn/R/PDSwR2/Statlog')
+d <- read.table('german.data', sep=' ',
+                stringsAsFactors = FALSE, header = FALSE)
+head(d)
+colnames(d) <- c('Status_of_existing_checkin_account', 'Duration_in_month',
+                 'Credit_history', 'Purpose', 'Credit_amount', 'Savings_account_bonds',
+                 'Present_employment_since', 'Installment_rate_in_percentage_of_disposable_income', 
+                 'Personal_status_and_sex', 'Other_debtors_guarantors',
+                 'Present_residence_since', 'Property', 'Age_in_years',
+                 'Other_installment_plans', 'Housing',
+                 'Number_of_existing_credits_at_this_bank', 'Job',
+                 'Number_of_people_being_liable_to_provide_maintenance_for',
+                 'Telephone', 'foreign_worker', 'Good_loan')
+str(d)
+class(str(d))
+names(d)
+
+# after loading the RMarkdown file
+d <- readRDS('creditdata.RDS')
+table(d$Purpose, d$Good_Loan)
+
+
+### Working with relational databases
+# package: sqldf
+# We will start working with data in a database for our next example
+
+## Before continuing....
+# Check the repo and book for all the details taken care of in the Rmd files
+# for de credit example
+#   For example. When dealing with the credit example, functions are used
+#   and I don't know how to use functions
+# Also, maybe reading chapter 1 will help
+# Same for the following example (SQL example)
+
+
+
+
+
+
+
 
 
 
